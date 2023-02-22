@@ -25,14 +25,19 @@
  #fullCustomers ul{
   border: 1px solid grey;
   box-sizing: border-box;
-  width: 200px;
+  border-radius: 10px;
   list-style: none;
   text-align: center;
   display: inline-table;
+  height: 350px;
  }
 
 #links a{
   display: inline;
   font-size: 1.2em;
+}
+
+img{
+  width: 220px;
 }
 

@@ -1,8 +1,16 @@
 <h2>Customers With Missing Email</h2>
 <br>
-<% @customers = Customer.where(email: "").each do |customer| %>
-  <p><%= customer.full_name %></p>
-<% end %>
+<div id="fullCustomers">
+  <% @customers = Customer.where(email: "").each do |customer| %>
+    <ul>
+      <li><span><%= customer.full_name %></span></li>
+      <li><%= image_tag customer.image %></li>
+      <li><%= customer.phone_number %></li>
+      <li><%= customer.email %></li>
+      <li><%= customer.notes %></li>
+    </ul>
+  <% end %>
+</div>
 <div id="links">
   <%= link_to "All Customers", customers_path %>
   <br>

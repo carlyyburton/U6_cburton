@@ -1,1 +1,16 @@
-<%= image_tag(@customers.image) %>
+<div id="fullCustomers">
+  <% @customers = Customer.all.each do |customer| %>
+    <ul>
+      <li><span><%= customer.full_name %></span></li>
+      <li><%= image_tag customer.image %></li>
+      <li><%= customer.phone_number %></li>
+      <li><%= customer.email %></li>
+      <li><%= customer.notes %></li>
+    </ul>
+  <% end %>
+</div>
+<div id="links">
+  <%= link_to "Alphabetized", alphabetized_path %>
+  <br>
+  <%= link_to "Customers Missing an Email", missing_email_path %>
+</div>
