@@ -1,0 +1,10 @@
+<h2>Customers With Missing Email</h2>
+<br>
+<% @customers = Customer.where(email: "").each do |customer| %>
+  <p><%= customer.full_name %></p>
+<% end %>
+<div id="links">
+  <%= link_to "All Customers", customers_path %>
+  <br>
+  <%= link_to "Alphabetized", alphabetized_path %>
+</div>

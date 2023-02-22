@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  root "customers#index"
+  get "/customers/alphabetized", as: 'alphabetized'
+  get "/customers/missing_email", as: 'missing_email'
+
+  resources :customers
 end

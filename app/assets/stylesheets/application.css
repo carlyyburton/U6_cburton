@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+ *{
+  padding: 5px;
+ }
+
+ #fullCustomers span{
+  font-size: 1.4em;
+  font-weight: bold;
+ }
+
+ #fullCustomers ul{
+  border: 1px solid grey;
+  box-sizing: border-box;
+  width: 200px;
+  list-style: none;
+  text-align: center;
+  display: inline-table;
+ }
+
+#links a{
+  display: inline;
+  font-size: 1.2em;
+}
+

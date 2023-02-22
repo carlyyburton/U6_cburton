@@ -1,5 +1,5 @@
 class Customer < ApplicationRecord
-  has_many_attached :images
+  has_one_attached :image
 
   validates :full_name, :phone_number, presence:true
 end
